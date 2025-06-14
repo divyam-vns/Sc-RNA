@@ -1,0 +1,46 @@
+#  Seurat v5 “Getting Started” guide.
+🧬 What is Seurat?
+A toolkit in R for analyzing single-cell RNA-seq data.
+
+Helps you explore how genes behave in different individual cells.
+
+🧪 Basic Workflow Steps in Seurat v5
+1. Install and Load Seurat
+Use install.packages("Seurat") (or install from GitHub for the latest version).
+
+Load it using library(Seurat).
+
+2. Load Your Data
+Use Read10X() to read 10X Genomics data.
+
+Create a Seurat object with CreateSeuratObject().
+
+3. Quality Control (QC)
+Filter out bad cells (e.g. too few genes or too many mitochondrial genes).
+
+Use subset() and PercentageFeatureSet().
+
+4. Normalize the Data
+Use NormalizeData() to scale gene expression for each cell.
+
+5. Find Variable Genes
+Use FindVariableFeatures() to find genes that differ between cells.
+
+6. Scale the Data
+Use ScaleData() to center and scale data for PCA.
+
+7. Dimensionality Reduction
+Run RunPCA() to reduce complexity.
+
+Visualize using ElbowPlot().
+
+8. Clustering
+Use FindNeighbors() and FindClusters() to group similar cells.
+
+9. Visualize Clusters
+Use RunUMAP() or RunTSNE() for 2D plots.
+
+Use DimPlot() to see clusters.
+
+10. Explore Marker Genes
+Use FindMarkers() to find genes that define each cluster.
